@@ -14,14 +14,15 @@ public class LabBinarySearchTree<T extends Comparable<T>> extends BinarySearchTr
         return new LabBinarySearchTree<T>(cln(root));
     }
 
-    private <T extends Comparable<T>> BTNode<T> cln(BTNode<T> node){
-    BTNode<T> Cnode = new BTNode<T>(node.value,null,null);
-    if(node.left != null)
-        Cnode.left=cln(node.left);
-    if(node.right != null)
-        Cnode.right = cln(node.right);
-        return Cnode;
-    }
+    BTNode<T> cln(BTNode<T> node){
+      BTNode<T> Cnode = new BTNode<T>(node.value,null,null);
+      if(node.left != null)
+          Cnode.left=cln(node.left);
+      if(node.right != null)
+          Cnode.right = cln(node.right);
+          return Cnode;
+      }
+      
     @Override
     public BTNode<T> successor(T value) {
         BTNode<T> current = find(getRoot(),value);
