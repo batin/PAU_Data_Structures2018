@@ -24,7 +24,7 @@ public class Islemler {
     Stack<T> stack2;
     stack2 = (Stack<T>)s2.clone();
     while(!stack1.isEmpty())
-        if(stack1.pop() !=stack2.pop())
+        if(stack1.pop() != stack2.pop())
            return false;
     return true;
     }
@@ -59,20 +59,7 @@ public class Islemler {
 
         return stack.pop();
     }
-
- private static int getPriority(String symbol) {
-        int priority = 0;
-
-        if (symbol.equals("+") || symbol.equals("-")) {
-            priority = 0;
-        } else if (symbol.equals("*") || symbol.equals("/")) {
-            priority = 1;
-        } else {
-            priority = -1;
-        }
-
-        return priority;
-    }
+    
     /**
      * Infix ifadeyi postfix'e dönüştürür.
      * @param girdi Infix girdi metni

@@ -20,7 +20,7 @@ public class BinaryHeap<T extends Comparable<T>> {
   public void ekle(T eleman){
       dizi[++es] = eleman;
       T temp = null;
-      int nodeIndex=es;
+      int nodeIndex = es;
       while(nodeIndex != 1 && dizi[nodeIndex].compareTo(dizi[ebeveyn(nodeIndex)]) < 0){
       temp = dizi[ebeveyn(nodeIndex)];
       dizi[ebeveyn(nodeIndex)] = dizi[nodeIndex];
